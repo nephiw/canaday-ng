@@ -1,0 +1,12 @@
+<div id="portfolio-promos" class="portfolio-item" (click)="openModal()">
+  <div class="item-wrap">
+    <a [href]="modal" title="">
+        <img alt="" [src]="image">
+        <div class="overlay">
+          <div class="portfolio-item-meta">
+            <ng-content></ng-content>
+          </div>
+        </div>
+      </a>
+  </div>
+</div>

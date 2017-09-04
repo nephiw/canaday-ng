@@ -1,0 +1,25 @@
+<header id="home" [style.height.px]="windowHeight" [style.width.px]="windowWidth">
+  <app-navigation></app-navigation>
+  <div class="row banner">
+    <div class="banner-text">
+      <h1 appScalingText [minFontSize]="40" [maxFontSize]="90">Rich Canaday</h1>
+      <h3>Producer &bull; Writer &bull; Director<br>
+        <a pageScroll href="#about">Start scrolling</a> to learn more
+        <a pageScroll href="#about">about me</a>.
+      </h3>
+      <hr />
+      <ul class="social">
+        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="scrolldown">
+    <a pageScroll href="#about">
+      <span class="icon-down-circle"></span>
+    </a>
+  </p>
+</header>
