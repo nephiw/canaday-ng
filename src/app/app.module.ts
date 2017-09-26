@@ -6,6 +6,7 @@ import { WindowTokenModule } from './core/windowToken.module';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { ModalService } from './core/modal.service';
+import { SafePipe } from './core/safe.pipe';
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { ScalingTextDirective } from './app-header/scaling-text.directive';
@@ -21,6 +22,7 @@ import { MarketingModalComponent } from './app-content/marketing-modal/marketing
 
 @NgModule({
   declarations: [
+    SafePipe,
     AppComponent,
     AppFooterComponent,
     AppHeaderComponent,
