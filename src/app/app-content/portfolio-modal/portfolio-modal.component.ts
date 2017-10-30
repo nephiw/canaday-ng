@@ -1,26 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModalService } from '../../core/modal.service';
-import { PortfolioModalItem } from '../portfolio-modal/portfolio-modal-item';
+import { PortfolioModalItem } from './portfolio-modal-item';
 
 @Component({
-  selector: 'app-marketing-modal',
-  templateUrl: './marketing-modal.component.html'
+  selector: 'app-portfolio-modal',
+  templateUrl: './portfolio-modal.component.html',
+  styleUrls: ['./portfolio-modal.component.css']
 })
-export class MarketingModalComponent {
-  public videos: PortfolioModalItem[] = [
-    { name: 'Liberty Analyst Marketing Reel', href: 'https://www.youtube.com/embed/6PrbxuanDOo?rel=0&amp;showinfo=0', type: 'Marketing' },
-  ];
+export class PortfolioModalComponent implements OnInit {
+  @Input() videoToken: string;
+  
+  public videos: PortfolioModalItem[] = [];
+
   private currentIndex: number = 0;
   private maxIndex: number = this.videos.length - 1;
-
   public currentVideo: PortfolioModalItem;
 
-  constructor(private modalService: ModalService, ) { }
+  constructor(private modalService: ModalService) { }
 
   public ngOnInit(): void {
     this.currentVideo = this.videos[this.currentIndex];
   }
-
+  
   public next(): void {
     this.currentIndex = (1 + this.currentIndex) % this.maxIndex;
     this.currentVideo = this.videos[this.currentIndex];
@@ -37,8 +38,8 @@ export class MarketingModalComponent {
   public close() {
     this.modalService.close();
   }
-
+  
   public static get id(): string {
-    return '#marketing-modal';
+    return '#interview-modal';
   }
 }

@@ -5,14 +5,15 @@
     </div>
 
     <div class="description-box">
-      <h4>The Big Interview with Quentin Tarantino</h4>
-      <p>Client: AXS TV</p>
-      <span class="categories"><span class="fa fa-tag"></span>Interview</span>
+      <h4>{{ currentVideo.name }}</h4>
+      <span class="categories">
+        <span class="fa fa-tag"></span>{{ currentVideo.type }}
+      </span>
     </div>
 
     <div class="link-box">
-        <a class="popup-modal-previous" (click)="previous()">Previous</a>
-        <a class="popup-modal-next" (click)="next()">Next</a>
+      <a class="popup-modal-previous" (click)="previous()">Previous</a>
+      <a class="popup-modal-next" (click)="next()">Next</a>
       <a class="popup-modal-dismiss" (click)="close()">Close</a>
     </div>
   </div>

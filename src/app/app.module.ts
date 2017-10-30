@@ -19,6 +19,7 @@ import { PromoModalComponent } from './app-content/promo-modal/promo-modal.compo
 import { InterviewModalComponent } from './app-content/interview-modal/interview-modal.component';
 import { ImageModalComponent } from './app-content/image-modal/image-modal.component';
 import { MarketingModalComponent } from './app-content/marketing-modal/marketing-modal.component';
+import { PortfolioModalComponent } from './app-content/portfolio-modal/portfolio-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MarketingModalComponent } from './app-content/marketing-modal/marketing
     PromoModalComponent,
     InterviewModalComponent,
     ImageModalComponent,
-    MarketingModalComponent
+    MarketingModalComponent,
+    PortfolioModalComponent
   ],
   imports: [
     BrowserModule,

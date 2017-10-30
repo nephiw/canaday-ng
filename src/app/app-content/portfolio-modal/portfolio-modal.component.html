@@ -1,5 +1,5 @@
 <app-modal>
-  <div id="promo-modal" class="popup-modal">
+  <div id="interview-modal" class="popup-modal">
     <div class="video-wrapper">
       <iframe width="560" height="315" [src]="currentVideo.href | safe" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -12,8 +12,8 @@
     </div>
 
     <div class="link-box">
-      <a class="popup-modal-previous" (click)="previous()">Previous</a>
-      <a class="popup-modal-next" (click)="next()">Next</a>
+      <a class="popup-modal-previous" *ngIf="videos.length > 1" (click)="previous()">Previous</a>
+      <a class="popup-modal-next" *ngIf="videos.length > 1" (click)="next()">Next</a>
       <a class="popup-modal-dismiss" (click)="close()">Close</a>
     </div>
   </div>
